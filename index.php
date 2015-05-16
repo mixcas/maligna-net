@@ -2,10 +2,24 @@
 get_header();
 ?>
 
-<!-- main content -->
 
+<!-- Sidebar 1 -->
+<div id="sidebar-1">
+  <header id="header">
+    <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+    <nav>
+      <a href="#">News</a>
+      <a href="#">Releases</a>
+      <a href="#">Artists</a>
+      <a href="#">Store</a>
+    </nav>
+  </header>
+</div>
+
+<!-- main content -->
 <main id="main-content">
 
+<?php /*
   <!-- main posts loop -->
   <section id="posts">
 
@@ -32,6 +46,8 @@ if( have_posts() ) {
 } ?>
 
   <!-- end posts -->
+ */
+?>
   </section>
 
   <?php get_template_part('partials/pagination'); ?>
@@ -39,6 +55,10 @@ if( have_posts() ) {
 <!-- end main-content -->
 
 </main>
+
+<!-- Sidebar 2 -->
+<div id="sidebar-2">
+</div>
 
 <?php
 get_footer();

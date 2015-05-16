@@ -73,6 +73,22 @@ img
   max-width: 100%
   height: auto
 
+#main-container
+  display: flex
+  flex-flow: row nowrap
+  padding: 5px
+
+#sidebar-1
+  flex: 0 0 300px
+  order: 1
+
+#sidebar-2
+  flex: 0 0 300px
+  order: 2
+
+#main-content
+  flex-grow: 1
+  order: 3
 
 //the 100% widths are just so stylus can compile delete as desired
 
@@ -80,6 +96,9 @@ img
 
 #header
   width: 100%
+
+nav a
+  display: block
 
 // POSTS LOOP
 #posts
