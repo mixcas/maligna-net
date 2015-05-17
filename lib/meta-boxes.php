@@ -37,7 +37,7 @@ function igv_cmb_metaboxes() {
   $release_info = new_cmb2_box( array(
     'id'           => $prefix . 'release_info',
     'title'        => __( 'Release Info', 'cmb2' ),
-    'object_types' => array( 'release', ),
+    'object_types' => array( 'releases', ),
   ) );
 
   // -- Catalog No.
@@ -79,7 +79,7 @@ function igv_cmb_metaboxes() {
   $artist_releases = new_cmb2_box( array(
     'id'           => $prefix . 'artist_releases',
     'title'        => __( 'Releases', 'cmb2' ),
-    'object_types' => array( 'artist', ),
+    'object_types' => array( 'artists', ),
   ) );
 
   $artist_releases->add_field( array(
