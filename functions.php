@@ -48,6 +48,11 @@ function cmb_initialize_cmb_meta_boxes() {
   // Add CMB2 plugin
   if( ! class_exists( 'cmb2_bootstrap_202' ) )
     require_once 'lib/CMB2/init.php';
+
+  // Setup for the custom Attached Posts field for CMB2. */
+  if ( ! function_exists( 'cmb2_attached_posts_fields_render' ) )
+    require_once 'lib/cmb2-attached-posts/cmb2-attached-posts-field.php';
+    
 }
 
 // Disable that freaking admin bar
