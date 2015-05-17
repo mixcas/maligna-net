@@ -15,7 +15,6 @@ if ( $posts ) {
 return $post_options;
 }
 
-
 /**
  * Include and setup custom metaboxes and fields.
  *
@@ -36,7 +35,7 @@ function igv_cmb_metaboxes() {
 
   // Releases
   $release_info = new_cmb2_box( array(
-    'id'           => $prefix . 'metabox',
+    'id'           => $prefix . 'release_info',
     'title'        => __( 'Release Info', 'cmb2' ),
     'object_types' => array( 'release', ),
   ) );
@@ -75,6 +74,23 @@ function igv_cmb_metaboxes() {
     'id'   => $prefix . 'release_date',
     'type' => 'text_date',
   ) );
+
+  // Artist
+  $artist_releases = new_cmb2_box( array(
+    'id'           => $prefix . 'artist_releases',
+    'title'        => __( 'Releases', 'cmb2' ),
+    'object_types' => array( 'artist', ),
+  ) );
+
+  $artist_releases->add_field( array(
+    'id'      => $prefix . 'attached_releases',
+    'type'    => 'custom_attached_posts',
+    'options' => array(
+      'show_thumbnails' => true, // Show thumbnails on the left
+      'query_args'      => array( 'posts_per_page' => -1, 'post_type' => 'release' ), // override the get_posts args
+    ),
+  ) );
+
 
 	/**
 	 * Metaboxes declarations here
