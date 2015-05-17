@@ -34,6 +34,48 @@ function igv_cmb_metaboxes() {
 	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_igv_';
 
+  // Releases
+  $release_info = new_cmb2_box( array(
+    'id'           => $prefix . 'metabox',
+    'title'        => __( 'Release Info', 'cmb2' ),
+    'object_types' => array( 'release', ),
+  ) );
+
+  // -- Catalog No.
+  $release_info->add_field( array(
+    'name' => __( 'Catalog No.', 'cmb2' ),
+    'id'   => $prefix . 'catalog_no',
+    'type' => 'text_small',
+  ) );
+
+  // -- Artist
+  $release_info->add_field( array(
+    'name' => __( 'Artist', 'cmb2' ),
+    'id'   => $prefix . 'artist',
+    'type' => 'text_medium',
+  ) );
+
+  // -- Format
+  $release_info->add_field( array(
+    'name'             => __( 'Format', 'cmb2' ),
+    'id'               => $prefix . 'format',
+    'type'             => 'select',
+    'show_option_none' => true,
+    'options'          => array(
+      'digital' => __( 'Digital One', 'cmb2' ),
+      'cd'   => __( 'CD', 'cmb2' ),
+      'cassete'     => __( 'Cassete', 'cmb2' ),
+      'vinyl'     => __( 'Vinyl', 'cmb2' ),
+    ),
+  ) );
+
+  // -- Date
+  $release_info->add_field( array(
+    'name' => __( 'Release date', 'cmb2' ),
+    'id'   => $prefix . 'release_date',
+    'type' => 'text_date',
+  ) );
+
 	/**
 	 * Metaboxes declarations here
    * Reference: https://github.com/WebDevStudios/CMB2/blob/master/example-functions.php
