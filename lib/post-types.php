@@ -57,7 +57,7 @@ function register_cpt_release() {
         'capability_type' => 'post'
     );
 
-    register_post_type( 'release', $args );
+    register_post_type( 'releases', $args );
 }
 
 // Relases
@@ -101,5 +101,5 @@ function register_cpt_artist() {
         'capability_type' => 'post'
     );
 
-    register_post_type( 'artist', $args );
+    register_post_type( 'artists', $args );
 }
