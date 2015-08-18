@@ -8,6 +8,8 @@
 
   <?php get_template_part('partials/seo'); ?>
 
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+
   <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
   <link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png">
   <link rel="shortcut" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.ico">
@@ -31,6 +33,14 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+ <div id="vid-bg">
+  <video poster="<?php bloginfo('stylesheet_directory'); ?>/vid/1.png" preload="true" autoplay="true" loop="true">
+    <source src="<?php bloginfo('stylesheet_directory'); ?>/vid/1.mp4" type="video/mp4" />
+    <source src="<?php bloginfo('stylesheet_directory'); ?>/vid/1.webm" type="video/webm" />
+    <source src="<?php bloginfo('stylesheet_directory'); ?>/vid/1.ogv" type="video/ogg" />
+    <span title="No video playback capabilities, please download the video below"></span>
+  </video>
+  </div> 
 <!--[if lt IE 7]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->
 
   <section id="main-container">
