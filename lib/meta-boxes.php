@@ -58,14 +58,14 @@ function igv_cmb_metaboxes() {
   $release_info->add_field( array(
     'name'             => __( 'Format', 'cmb2' ),
     'id'               => $prefix . 'format',
-    'type'             => 'select',
-    'show_option_none' => true,
-    'options'          => array(
-      'digital' => __( 'Digital One', 'cmb2' ),
+    'type'    => 'multicheck',
+    'select_all_button' => false,
+    'options' => array(
+      'digital' => __( 'Digital', 'cmb2' ),
       'cd'   => __( 'CD', 'cmb2' ),
       'cassete'     => __( 'Cassete', 'cmb2' ),
       'vinyl'     => __( 'Vinyl', 'cmb2' ),
-    ),
+    )
   ) );
 
   // -- Date

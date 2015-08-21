@@ -26,8 +26,8 @@ $margin-small = ($gutter)
 $margin-basic = ($gutter*2)
 $margin-large = ($gutter*5)
 
-$font-size-basic = 15px
-$font-leading-basic = 1.35em
+$font-size-basic = 17px
+$font-leading-basic = 1.4
 $font-tracking-basic = 0.001em
 
 $color-black-soft = rgb(14,14,14)
@@ -36,16 +36,19 @@ $color-white-soft = rgb(253,253,253)
 // TYPOGRAPHY
 
 body
-  font-family:helvetica,arial,sans-serif
+  font-family: 'Oswald', helvetica,arial,sans-serif
   font-size: $font-size-basic
   line-height: $font-leading-basic
   letter-spacing: $font-tracking-basic
+  color: $color-white-soft
+  font-weight: 300
 
 h1
   font-size: 3em
 
 h2
   font-size: 2em
+  //line-height: 1.4
 
 h3
   font-size: 1.5em
@@ -69,6 +72,23 @@ html
   background-color: $color-white-soft
   color: $color-black-soft
 
+#vid-bg
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: -1
+
+  video
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    min-height: 100%
+    min-width: 100%
+
 img
   max-width: 100%
   height: auto
@@ -76,17 +96,22 @@ img
 #main-container
   display: flex
   flex-flow: row nowrap
-  padding: 5px
+  padding: 30px 15px
+  max-width: 1080px
 
 #sidebar-1
-  flex: 0 0 300px
+  padding: 0 15px
+  flex: 0 0 210px
   order: 1
+  max-height: 100vh
 
 #sidebar-2
-  flex: 0 0 300px
+  padding: 0 15px
+  flex: 0 0 210px
   order: 2
 
 #main-content
+  padding: 0 15px
   flex-grow: 1
   order: 3
 
@@ -100,6 +125,11 @@ img
 nav a
   display: block
 
+#logo
+  max-width: 100%
+  max-height: 300px
+
+
 // POSTS LOOP
 #posts
   width: 100%
@@ -109,6 +139,9 @@ nav a
 
 #pagination
   width: 100%
+
+.release-thumb
+  margin-bottom: 15px
 
 
 // FOOTER
@@ -122,3 +155,49 @@ nav a
 @media screen and (max-width: ($col * $cols)+($gutter * $cols))
   html
     width: 100%
+
+
+@media screen and (max-width: 800px)
+  #main-container
+    flex-flow: column
+
+  #sidebar-1
+    flex: 0 1 auto
+    order: 1
+
+  #sidebar-2
+    flex: 410px 1 auto
+    order: 2
+    overflow: visible
+
+  #main-content
+    order: 3
+
+@media screen and (max-width: 414px)
+  #header
+    display: flex
+
+  #main-container
+    padding: 0 5px
+
+  #sidebar-1
+    flex: 0 1 auto
+    order: 1
+
+  #sidebar-2
+    flex: 0 1 auto
+    order: 3
+    overflow: visible
+
+  #main-content
+    flex: 0 1 auto
+    padding: 0 15px
+    flex-grow: 1
+    order: 2
+    
+  .release-thumb 
+    a
+      display: block
+
+    img
+      width: 100%

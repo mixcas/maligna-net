@@ -22,6 +22,8 @@ if( have_posts() ) {
 
       <h2><?php the_title(); ?></h2>
 
+      <?php the_post_thumbnail('single-featured'); ?>
+
       <?php the_content(); ?>
 
     </article>

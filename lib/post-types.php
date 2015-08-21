@@ -22,7 +22,7 @@ add_action( 'init', 'register_cpt_release' );
 function register_cpt_release() {
 
     $labels = array( 
-        'name' => _x( 'Releases', 'release' ),
+        'name' => _x( 'Releases', 'releases' ),
         'singular_name' => _x( 'Release', 'release' ),
         'add_new' => _x( 'Add New', 'release' ),
         'add_new_item' => _x( 'Add New Release', 'release' ),
@@ -66,7 +66,7 @@ add_action( 'init', 'register_cpt_artist' );
 function register_cpt_artist() {
 
     $labels = array( 
-        'name' => _x( 'Artists', 'artist' ),
+        'name' => _x( 'Artists', 'artists' ),
         'singular_name' => _x( 'Artist', 'artist' ),
         'add_new' => _x( 'Add New', 'artist' ),
         'add_new_item' => _x( 'Add New Artist', 'artist' ),

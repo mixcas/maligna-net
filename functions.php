@@ -29,7 +29,8 @@ if( function_exists( 'add_image_size' ) ) {
   add_image_size( 'opengraph', 1200, 630, true );
 
   add_image_size( 'name', 199, 299, true );
-  add_image_size( '300x300', 300, 300, true );
+  add_image_size( 'archive-thumb', 210, 210, true );
+  add_image_size( 'single-featured', 600, 9999, false );
 }
 
 // Register Nav Menus
@@ -133,7 +134,7 @@ function is_single_type($type, $post) {
 }
 
 // Print vars
-function pr($var) {
+function pra($var) {
   echo '<pre>';
   print_r($var);
   echo '</pre>';
