@@ -35,7 +35,7 @@
 <body <?php body_class(); ?>>
  <div id="vid-bg">
 <?php $random_video = rand(1,3); ?>
-  <video poster="<?php bloginfo('stylesheet_directory'); ?>/vid/1.png" preload="true" autoplay="true" loop="true">
+  <video poster="<?php bloginfo('stylesheet_directory'); ?>/vid/<?php echo $random_video; ?>.jpg" preload="true" autoplay="true" loop="true">
     <source src="<?php bloginfo('stylesheet_directory'); ?>/vid/<?php echo $random_video; ?>.mp4" type="video/mp4" />
     <source src="<?php bloginfo('stylesheet_directory'); ?>/vid/<?php echo $random_video; ?>.webm" type="video/webm" />
     <source src="<?php bloginfo('stylesheet_directory'); ?>/vid/<?php echo $random_video; ?>.ogv" type="video/ogg" />
