@@ -20,9 +20,9 @@ if( have_posts() ) {
 
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-      <h2><?php the_title(); ?></h2>
+    <a href="<?php the_permalink() ?>"><h2 data-date="<?php echo the_date('d / m / Y '); ?>"><?php the_title(); ?></h2></a>
 
-      <?php the_post_thumbnail('single-featured'); ?>
+      <?php the_post_thumbnail('archive-featured'); ?>
 
       <?php the_content(); ?>
 

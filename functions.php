@@ -29,8 +29,9 @@ if( function_exists( 'add_image_size' ) ) {
   add_image_size( 'opengraph', 1200, 630, true );
 
   add_image_size( 'name', 199, 299, true );
-  add_image_size( 'archive-thumb', 210, 210, true );
+  add_image_size( 'archive-thumb', 210, 999, false );
   add_image_size( 'single-featured', 600, 9999, false );
+  add_image_size( 'archive-featured', 900, 9999, false );
 }
 
 // Register Nav Menus
@@ -56,9 +57,6 @@ function cmb_initialize_cmb_meta_boxes() {
     require_once 'lib/cmb2-attached-posts/cmb2-attached-posts-field.php';
     
 }
-
-// Disable that freaking admin bar
-add_filter('show_admin_bar', '__return_false');
 
 // Turn off version in meta
 function no_generator() { return ''; }

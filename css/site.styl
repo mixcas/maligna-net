@@ -49,7 +49,7 @@ h1
 h2
   font-size: 2em
   margin-bottom: 15px
-  //line-height: 1.4
+  line-height: 1
 
 h3
   font-size: 1.5em
@@ -72,6 +72,9 @@ a,a:active,a:visited
 html
   background-color: $color-white-soft
   color: $color-black-soft
+
+article
+  margin-bottom: 60px
 
 #vid-bg
   position: fixed
@@ -144,6 +147,14 @@ nav a
 .release-thumb
   margin-bottom: 15px
 
+// Blog
+.blog 
+  h2:after
+    content: attr(data-date)
+    padding-left: 15px
+    font-size: 0.5em
+    font-weight: 100
+    vertical-align: baseline
 
 // FOOTER
 
@@ -152,6 +163,7 @@ nav a
 
 // Single
 .attachment-single-featured
+  display: block
   margin-bottom: 15px
 
 // MEDIA QUERIES
