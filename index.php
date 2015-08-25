@@ -9,7 +9,6 @@ get_header();
 <!-- main content -->
 <main id="main-content">
 
-<?php /*
   <!-- main posts loop -->
   <section id="posts">
 
@@ -36,8 +35,6 @@ if( have_posts() ) {
 } ?>
 
   <!-- end posts -->
- */
-?>
   </section>
 
   <?php get_template_part('partials/pagination'); ?>
