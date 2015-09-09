@@ -58,6 +58,15 @@ function cmb_initialize_cmb_meta_boxes() {
     
 }
 
+// Change posts_per_page on release and artist archives
+function get_all_posts_archives($query) {
+  // Only on Artists and Releases
+  if( is_post_type_archive(['artists', 'releases']) && $query->is_main_query() ) {
+      $query->set( 'posts_per_page', '-1' );
+  }
+}
+add_action('pre_get_posts', 'get_all_posts_archives');
+
 // Turn off version in meta
 function no_generator() { return ''; }
 add_filter( 'the_generator', 'no_generator' );
